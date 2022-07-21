@@ -1,7 +1,7 @@
 :root{
     --myBlue: rgb(68, 218, 255);
-    --space: max(30%,300px);
-}
+    --space: clamp(300px, 30%, 500px)
+;}
 
 * {
     box-sizing: border-box;
@@ -22,7 +22,6 @@ main {
 
 .leftDesign {
     height: 100%;
-    /* width: max(350px,40vw); */
     width: var(--space);
 }
 
@@ -57,4 +56,69 @@ main {
 .rightDesign {
     border: solid red;
     width: calc(100% - var(--space));
+    display: flex;
+    flex-flow: column nowrap;
+	background: linear-gradient(-45deg, #ff00f2, #02e1ff);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;	
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.textArea {
+    border: solid red;
+    font-size: 2rem;
+    color: white;
+}
+
+#remoteText {
+    margin-top: 20px;
+}
+
+.formArea {
+    border: solid red;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.section {
+    height: 100px;
+    width: 40%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items:flex-start;
+    gap: 10px;
+    color: white;
+    text-align: start;
+    margin: 0px 20px
+}
+
+input {
+    background-color: #02e1ff00;
+    border-style: none;
+    border-radius: 5px;
+    padding: 10px;
+    border: solid var(--myBlue);
+    width: 100%;
+}
+
+.btnArea {
+    display: flex;
+    justify-content: center;
+    border: solid blue;
 }
