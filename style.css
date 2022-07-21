@@ -14,7 +14,7 @@
 body {
     height: 100vh;
     width: 100vw; 
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 main {
@@ -67,7 +67,7 @@ main {
 	background: linear-gradient(-45deg, var(--myPink), var(--myBlue));
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;	
-	height: 100vh;
+	height: 100%;
 }
 
 @keyframes gradient {
@@ -83,7 +83,7 @@ main {
 }
 
 .textArea {
-    font-size: 2.5vw;
+    font-size: clamp(1rem, 2.5vw, 2.5rem);
     color: white;
     width: 90%;
 }
@@ -194,15 +194,11 @@ a {
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    width: 100%;
-    padding: 10px;
-    font-size: 20px;
+    margin-top: 40px;
 }
 
 img {
