@@ -1,3 +1,8 @@
+:root{
+    --myBlue: rgb(68, 218, 255);
+    --space: max(30%,300px);
+}
+
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -6,8 +11,50 @@
 
 body {
     height: 100vh;
+    width: 100vw; 
 }
 
-h1 {
-    border: 3px solid red;
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.leftDesign {
+    height: 100%;
+    /* width: max(350px,40vw); */
+    width: var(--space);
+}
+
+.banner {
+    background-image: url("pics/hiep-duong-MIwbCRv3wOc-unsplash.jpg");
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--myBlue);
+}
+
+.logoArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: black;
+    padding: 20px;
+    background-color: rgba(10, 1, 17, 0.753);
+    text-align: center;
+    width: 100%;
+}
+
+#logo {
+    width: 100px;
+}
+
+.rightDesign {
+    border: solid red;
+    width: calc(100% - var(--space));
 }
